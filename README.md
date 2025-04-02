@@ -1,6 +1,11 @@
 # 101434395LabTest2Comp3133
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Labtest 2
+Fetch spaceX launch informations in a list view
+Able to filter by searching base on year
+four buttons that filters base on success or failure for launch or landing
+View detail component for the user to see more information for individual flight
+hyperlinks for each flight number that links to Video, wikipedia or Article
 
 ## Development server
 
