@@ -6,7 +6,7 @@ import { MissionfilterComponent } from './missionfilter/missionfilter.component'
 
 export const routes: Routes = [
     {path: '', component: MissionlistComponent},
-    {path: 'detail', component: MissiondetailsComponent},
+    {path: 'detail/:id', component: MissiondetailsComponent},
     {path: 'filter', component: MissionfilterComponent}
 ];
 

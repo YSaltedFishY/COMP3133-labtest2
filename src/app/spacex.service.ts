@@ -20,7 +20,7 @@ export class SpacexService {
     return this.http.get<Launch[]>(`${this.url}?launch_year=${year}`)
   }
 
-  getLaunchById(id: number): Observable<Launch[]>{
-    return this.http.get<Launch[]>(`${this.url}/${id}`)
+  getLaunchById(id: number): Observable<Launch>{
+    return this.http.get<Launch>(`${this.url}/${id}`)
   }
 }

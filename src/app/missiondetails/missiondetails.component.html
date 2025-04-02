@@ -1,1 +1,44 @@
-<p>missiondetails works!</p>
+<div style="margin-top: 20px;">
+    <button mat-raised-button color="accent" routerLink="/">
+        ← Back to Mission List
+    </button>
+</div>
+
+<mat-card class="mission-card">
+    <h1 class="title">SpaceX Mission Details</h1>
+
+    <div class="content-container">
+        <img [src]="mission?.links?.mission_patch_small" alt="Patch" class="mission-img" />
+
+        <div class="info">
+            <h2 class="mission-name">Mission - {{ mission?.mission_name }}</h2>
+            <p><strong>Name:</strong> {{ mission?.mission_name }}</p>
+            <p><strong>Launch Year:</strong> {{ mission?.launch_year }}</p>
+
+            <h3 class="section-header">Rocket</h3>
+            <p><strong>Name:</strong> {{ mission?.rocket?.rocket_name }}</p>
+            <p><strong>Type:</strong> {{ mission?.rocket?.rocket_type }}</p>
+
+            <h3 class="section-header">Launch Site</h3>
+            <p><strong>Name:</strong> {{ mission?.launch_site?.site_name_long }}</p>
+        </div>
+    </div>
+
+    <h3 class="section-header">Launch Details</h3>
+    <p class="launch-details">
+        {{ mission?.details || 'No additional details available.' }}
+    </p>
+
+    <h3 class="section-header">More Info on Launch Details</h3>
+    <div class="links">
+        <a *ngIf="mission?.links?.article_link" [href]="mission?.links?.article_link" target="_blank">
+            <mat-icon>description</mat-icon>
+        </a>
+        <a *ngIf="mission?.links?.wikipedia" [href]="mission?.links?.wikipedia" target="_blank">
+            <mat-icon>wiki</mat-icon>
+        </a>
+        <a *ngIf="mission?.links?.video_link" [href]="mission?.links?.video_link" target="_blank">
+            <mat-icon>videocam</mat-icon>
+        </a>
+    </div>
+</mat-card>
