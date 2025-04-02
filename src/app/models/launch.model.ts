@@ -6,7 +6,11 @@ export interface Launch {
     rocket: {
         rocket_name: string;
         rocket_type: string;
-        land_success: boolean;
+        first_stage: {
+            cores: {
+                land_success: boolean | null;
+            }[];
+        };
     };
     links: {
         mission_patch_small: string;
