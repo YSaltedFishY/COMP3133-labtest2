@@ -1,0 +1,29 @@
+.mission-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mission-card {
+    width: 350px;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+}
+
+.links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #1976d2;
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+<div class="filter-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Launch Year</mat-label>
+      <input matInput placeholder="2008" [(ngModel)]="year">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="filterMissions()">
+      Filter Missions
+    </button>
+  </div>
+  
