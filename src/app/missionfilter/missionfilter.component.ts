@@ -30,4 +30,18 @@ export class MissionfilterComponent {
     });
   }
 
+  filterLaunches(success: boolean): void {
+    this.spacexService.getLaunchSuccess(success).subscribe(data => {
+      this.filteredMissions.emit(data);
+    });
+  }
+
+  
+  filterlandings(success: boolean): void {
+    this.spacexService.getLandSuccess(success).subscribe(data => {
+      this.filteredMissions.emit(data);
+    });
+  }
+
+
 }

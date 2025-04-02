@@ -1,7 +1,10 @@
-.filter-container {
+.filter-row {
     display: flex;
-    align-items: center;
-    gap: 15px;
     justify-content: center;
-    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+mat-form-field {
+    width: 200px;
 }

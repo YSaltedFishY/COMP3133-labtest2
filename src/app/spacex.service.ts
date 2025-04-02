@@ -23,4 +23,12 @@ export class SpacexService {
   getLaunchById(id: number): Observable<Launch>{
     return this.http.get<Launch>(`${this.url}/${id}`)
   }
+
+  getLaunchSuccess(success: boolean): Observable<Launch[]>{
+    return this.http.get<Launch[]>(`${this.url}?launch_success=${success}`)
+  }
+
+  getLandSuccess(success: boolean): Observable<Launch[]>{
+    return this.http.get<Launch[]>(`${this.url}?land_success=${success}`)
+  }
 }

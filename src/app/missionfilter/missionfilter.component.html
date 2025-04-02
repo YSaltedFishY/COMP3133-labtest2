@@ -1,11 +1,29 @@
-<div class="filter-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Launch Year</mat-label>
-      <input matInput placeholder="2008" [(ngModel)]="year">
-    </mat-form-field>
-  
-    <button mat-raised-button color="primary" (click)="filterMissions()">
-      Filter Missions
-    </button>
-  </div>
-  
+<div class="filter-row">
+  <mat-form-field appearance="fill">
+    <mat-label>Launch Year</mat-label>
+    <input matInput placeholder="e.g. 2020" [(ngModel)]="year">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="filterMissions()">
+    Filter by Year
+  </button>
+</div>
+
+
+<div class="filter-row">
+
+  <button mat-stroked-button color="primary" (click)="filterLaunches(true)">
+    Launch Success
+  </button>
+  <button mat-stroked-button color="warn" (click)="filterLaunches(false)">
+    Launch Failure
+  </button>
+
+
+  <button mat-flat-button color="accent" (click)="filterlandings(true)">
+    Land Success
+  </button>
+  <button mat-flat-button color="warn" (click)="filterlandings(false)">
+    Land Failure
+  </button>
+</div>
