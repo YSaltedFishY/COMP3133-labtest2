@@ -23,7 +23,7 @@ export class MissionfilterComponent {
   constructor(private spacexService: SpacexService){}
 
   filterMissions(): void {
-    if (!this.year.trim()) return;
+    if (!this.year.trim()) window.location.href = '/';
 
     this.spacexService.getLaunchesByYear(this.year.trim()).subscribe(data => {
       this.filteredMissions.emit(data);
